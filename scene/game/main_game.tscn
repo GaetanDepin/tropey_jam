@@ -5,7 +5,7 @@
 
 [node name="main_game" type="Node2D"]
 
-[node name="TileMap" parent="." instance=ExtResource( 1 )]
+[node name="map" parent="." instance=ExtResource( 1 )]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 5799.01, -1066.39 )
