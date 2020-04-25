@@ -1,11 +1,17 @@
 extends KinematicBody2D
 class_name Player
 
+<<<<<<< HEAD
 signal player_die()
 
 export(int) var SPEED = 300
 export(int) var JUMP_HEIGHT = 800
 export(int) var GRAVITY = 40
+=======
+export(int) var SPEED = 450
+export(int) var JUMP_HEIGHT = 1100
+export(int) var GRAVITY = 38
+>>>>>>> f2e88f065945125c93954678bdb044da40315c14
 
 var vel = Vector2.ZERO
 
