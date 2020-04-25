@@ -1,6 +1,8 @@
 extends KinematicBody2D
 class_name Player
 
+signal player_die()
+
 export(int) var SPEED = 300
 export(int) var JUMP_HEIGHT = 800
 export(int) var GRAVITY = 40
@@ -10,9 +12,11 @@ var vel = Vector2.ZERO
 func _process(delta):
 	pass
 
+
 func _physics_process(delta):
 	update_velocity()
 	vel = move_and_slide(vel, Vector2.UP)
+
 
 func update_velocity():
 	vel.x = 0
