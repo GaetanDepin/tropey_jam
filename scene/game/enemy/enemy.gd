@@ -1,4 +1,5 @@
 extends KinematicBody2D
+class_name Enemy
 
 export(float) var attack_time = 1
 
@@ -24,4 +25,3 @@ func _on_attack_timer_timeout():
 	instance.rotation_degrees = -90
 	instance.direction = Vector2(-1, 0)
 	self.add_child(instance)
-	print("ll")

@@ -1,5 +1,5 @@
 extends KinematicBody2D
-class_name player
+class_name Player
 
 export(int) var SPEED = 300
 export(int) var JUMP_HEIGHT = 800
