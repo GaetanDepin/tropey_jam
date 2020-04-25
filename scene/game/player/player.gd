@@ -29,3 +29,7 @@ func update_velocity():
 		vel.y -= JUMP_HEIGHT
 	vel.x *= SPEED
 	vel.y += GRAVITY
+
+
+func player_die():
+	emit_signal("player_die")

@@ -10,16 +10,15 @@
 extents = Vector2( 23.8527, 92.4627 )
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( -54.3221, -24.3856 )
 collision_layer = 2
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1.12207, -40.1518 )
+position = Vector2( -4.61035, -92.8216 )
 shape = SubResource( 1 )
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2( 0.950012, 18.7933 )
+position = Vector2( -6.14713, -35.0376 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -37,9 +36,9 @@ scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 5 )
 
 [node name="body" type="Sprite" parent="Node2D"]
-position = Vector2( -2.58191, -74.3484 )
+position = Vector2( 0, -67.988 )
 rotation = 1.5708
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 4 )
 
 [node name="arm1" type="Sprite" parent="Node2D"]
