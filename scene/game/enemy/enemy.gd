@@ -1,7 +1,13 @@
 extends KinematicBody2D
 class_name Enemy
 
+enum DIRECTION {
+	LEFT,
+	RIGHT
+}
+
 export(float) var attack_time = 1
+export(DIRECTION) var direction = DIRECTION.LEFT
 
 const dagger_class = preload("res://scene/game/enemy/dagger.tscn")
 
@@ -22,6 +28,10 @@ func _on_attack_timer_timeout():
 	var instance = dagger_class.instance()
 	
 	instance.position = throw_point.position
-	instance.rotation_degrees = -90
-	instance.direction = Vector2(-1, 0)
+	if DIRECTION.LEFT == direction:
+		instance.rotation_degrees = -90
+		instance.direction = Vector2(-1, 0)
+	else:
+		instance.rotation_degrees = 90
+		instance.direction = Vector2(1, 0)
 	self.add_child(instance)
