@@ -1,9 +1,9 @@
 extends KinematicBody2D
 class_name player
 
-export(int) var SPEED = 300
-export(int) var JUMP_HEIGHT = 800
-export(int) var GRAVITY = 40
+export(int) var SPEED = 450
+export(int) var JUMP_HEIGHT = 1100
+export(int) var GRAVITY = 38
 
 var vel = Vector2.ZERO
 
