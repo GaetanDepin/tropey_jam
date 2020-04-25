@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://resource/item/sword.png" type="Texture" id=1]
+[ext_resource path="res://scene/game/enemy/dagger.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 13.9161, 62.0587 )
+
+[node name="Dagger" type="Area2D"]
+scale = Vector2( 0.3, 0.3 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )

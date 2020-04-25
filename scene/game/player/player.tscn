@@ -19,6 +19,10 @@ position = Vector2( 3.97211, -49.6518 )
 shape = SubResource( 1 )
 
 [node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 0, -11.6067 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="leg0" type="Sprite" parent="Node2D"]
 position = Vector2( 4.47986, -4.74336 )
