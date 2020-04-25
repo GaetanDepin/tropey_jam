@@ -58,17 +58,16 @@ direction = 1
 
 [node name="Enemy5" parent="Enemycontainer" instance=ExtResource( 2 )]
 position = Vector2( 3184.23, -1727.39 )
-attack_time = 2.6
+attack_time = 2.7
 direction = 1
 
 [node name="Enemy6" parent="Enemycontainer" instance=ExtResource( 2 )]
 position = Vector2( 2804.74, 805.241 )
-attack_time = 1.0
 
 [node name="CheckpointContainer" type="Node2D" parent="."]
 
 [node name="Checkpoint" parent="CheckpointContainer" instance=ExtResource( 5 )]
-position = Vector2( 908.828, 427.149 )
+position = Vector2( 5214.9, -1482.22 )
 
 [node name="Spawn" type="Position2D" parent="."]
 position = Vector2( 292.454, 506.503 )
