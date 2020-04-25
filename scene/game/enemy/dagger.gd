@@ -10,6 +10,6 @@ func _process(delta):
 
 func _on_Dagger_body_entered(body):
 	if body is Player:
-		print("Player touch")
+		body.player_die()
 	if body.is_in_group("break_dagger"):
 		self.queue_free()
