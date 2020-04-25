@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://resource/perso/leg.png" type="Texture" id=1]
 [ext_resource path="res://scene/game/player/player.gd" type="Script" id=2]
@@ -8,6 +8,131 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 23.8527, 92.4627 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Walk"
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node2D/leg0:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 8.335, -55 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node2D/leg0:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 90.0002, 120.0, 90.0, 70.0, 90.0002 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node2D/leg1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -0.822, -55 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Node2D/leg1:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 90.0002, 70.0, 90.0, 120.0, 90.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Node2D/arm1:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -6.28142, -106.108 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Node2D/arm1:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.35, 0.65 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 90.0002, 120.0, 60.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Node2D/arm0:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 4.06264, -104.94 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Node2D/arm0:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.35, 0.65 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 90.0002, 70.0, 120.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Node2D/head:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.65 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 6.14253, -118.51 ), Vector2( 9.22339, -116.309 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Node2D/head:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
@@ -20,17 +145,26 @@ shape = SubResource( 1 )
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( -6.14713, -35.0376 )
 
-[node name="leg0" type="Sprite" parent="Node2D"]
-position = Vector2( 4.47986, -4.74336 )
-rotation = 1.5708
-scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 1 )
-
 [node name="arm0" type="Sprite" parent="Node2D"]
-position = Vector2( 4.40945, -65.9408 )
-rotation = 1.5708
+position = Vector2( 4.06264, -104.94 )
+rotation = 2.08691
 scale = Vector2( 0.18, 0.18 )
 texture = ExtResource( 5 )
+offset = Vector2( 200, -10 )
+
+[node name="leg0" type="Sprite" parent="Node2D"]
+position = Vector2( 8.335, -55 )
+rotation = 1.36495
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )
+offset = Vector2( 200, -50 )
+
+[node name="leg1" type="Sprite" parent="Node2D"]
+position = Vector2( -0.822, -55 )
+rotation = 1.87957
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )
+offset = Vector2( 200, -50 )
 
 [node name="body" type="Sprite" parent="Node2D"]
 position = Vector2( 1.94119, -85.1353 )
@@ -38,19 +172,18 @@ rotation = 1.5708
 scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 4 )
 
-[node name="leg1" type="Sprite" parent="Node2D"]
-position = Vector2( 7.76726, -7.88905 )
-rotation = 1.5708
-scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 1 )
-
 [node name="arm1" type="Sprite" parent="Node2D"]
-position = Vector2( 5.61447, -68.5055 )
-rotation = 1.5708
+position = Vector2( -6.28142, -106.108 )
+rotation = 1.05618
 scale = Vector2( 0.18, 0.18 )
 texture = ExtResource( 5 )
+offset = Vector2( 200, -10 )
 
 [node name="head" type="Sprite" parent="Node2D"]
-position = Vector2( 1.97527, -150.628 )
-scale = Vector2( 0.25, 0.25 )
+position = Vector2( 9.2112, -116.318 )
+scale = Vector2( 0.252949, 0.252949 )
 texture = ExtResource( 3 )
+offset = Vector2( -30, -130 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Walk = SubResource( 2 )
