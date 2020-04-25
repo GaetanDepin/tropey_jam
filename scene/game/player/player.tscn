@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://resource/perso/leg.png" type="Texture" id=1]
+[ext_resource path="res://scene/game/player/player.gd" type="Script" id=2]
+[ext_resource path="res://resource/perso/head.png" type="Texture" id=3]
+[ext_resource path="res://resource/perso/body.png" type="Texture" id=4]
+[ext_resource path="res://resource/perso/arm.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 23.8527, 72.78 )
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( -3.97211, -23.4356 )
+collision_layer = 2
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 3.97211, -49.6518 )
+shape = SubResource( 1 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="leg0" type="Sprite" parent="Node2D"]
+position = Vector2( 4.47986, -4.74336 )
+rotation = 1.5708
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 1 )
+
+[node name="arm0" type="Sprite" parent="Node2D"]
+position = Vector2( 4.40945, -65.9408 )
+rotation = 1.5708
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="body" type="Sprite" parent="Node2D"]
+position = Vector2( -2.58191, -74.3484 )
+rotation = 1.5708
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+
+[node name="arm1" type="Sprite" parent="Node2D"]
+position = Vector2( 7.87921, -61.7113 )
+rotation = 1.5708
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="leg1" type="Sprite" parent="Node2D"]
+position = Vector2( 3.36801, -2.7683 )
+rotation = 1.5708
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 1 )
+
+[node name="head" type="Sprite" parent="Node2D"]
+position = Vector2( -1.90714, -127.981 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
