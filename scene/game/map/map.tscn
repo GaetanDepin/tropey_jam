@@ -58,7 +58,7 @@ direction = 1
 
 [node name="Enemy5" parent="Enemycontainer" instance=ExtResource( 2 )]
 position = Vector2( 3184.23, -1727.39 )
-attack_time = 0.2
+attack_time = 2.6
 direction = 1
 
 [node name="Enemy6" parent="Enemycontainer" instance=ExtResource( 2 )]

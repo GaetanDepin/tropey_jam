@@ -10,7 +10,7 @@ script = ExtResource( 3 )
 [node name="Map" parent="." instance=ExtResource( 1 )]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 372.789, 335.116 )
+position = Vector2( 286.926, 539.536 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( 0, 7.95007 )
