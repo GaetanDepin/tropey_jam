@@ -15,3 +15,7 @@ func _on_map_checkpoint_activated(pos):
 
 func _on_Player_player_die():
 	player.position = last_checkpoint
+
+
+func _on_EndSword_pickup():
+	get_tree().change_scene("res://scene/menu/main_menu.tscn")

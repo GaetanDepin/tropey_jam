@@ -25,6 +25,10 @@ func _ready():
 
 
 func _on_attack_timer_timeout():
+	$AnimationPlayer.play("attack")
+
+
+func attack():
 	var instance = dagger_class.instance()
 	
 	instance.position = throw_point.position
